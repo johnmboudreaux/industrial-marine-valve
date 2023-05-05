@@ -48,9 +48,9 @@ h6 {
   line-height: 0;
 }
 
-.back-to-top:hover i {
+/* .back-to-top:hover i {
   background-color: #ffc451;
-}
+} */
 
 .back-to-top.active {
   visibility: visible;
@@ -182,7 +182,9 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar a:hover, .navbar,
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
 .navbar li:hover>a {
   color: #ffc451;
 }
@@ -373,7 +375,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 40, 104, 0.7);
+  background: rgba(0, 40, 104, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -536,33 +538,33 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Clients
+# Manufacturers
 --------------------------------------------------------------*/
-.clients {
+.manufacturer {
   padding-top: 20px;
 }
 
-.clients .swiper-slide img {
+.manufacturer .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
   filter: grayscale(100);
 }
 
-.clients .swiper-slide svg {
+.manufacturer .swiper-slide svg {
   width: 100px;
 }
 
-.clients .swiper-slide img:hover {
+.manufacturer .swiper-slide img:hover {
   filter: none;
   opacity: 1;
 }
 
-.clients .swiper-pagination {
+.manufacturer .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet {
+.manufacturer .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -570,7 +572,7 @@ section {
   background-color: #ddd;
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet-active {
+.manufacturer .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #ffc451;
 }
 
@@ -613,7 +615,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
+/* .services .image-box {
   text-align: center;
   border: 1px solid #ebebeb;
   padding: 80px 20px;
@@ -621,50 +623,79 @@ section {
   background: #fff;
 }
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: #ffc451;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
-.services .icon-box .icon i {
-  color: #151515;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box h4 {
+.services .image-box h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.services .image-box h4 a {
   color: #151515;
   transition: ease-in-out 0.3s;
 }
 
-.services .icon-box h4 a:hover {
+.services .image-box h4 a:hover {
   color: #ffc451;
 }
 
-.services .icon-box p {
+.services .image-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+.services .image-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
+} */
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .card {
+  border: 1px solid rgba(14, 29, 52, 0.15);
+  background: #fff;
+  position: relative;
+  border-radius: 0;
+  height: 100%;
+}
+
+.services .card .card-img {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 0;
+}
+
+.services .card .card-img img {
+  transition: 0.3s ease-in-out;
+}
+
+.services .card h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+
+.services .card a {
+  color: #001973;
+  transition: 0.3;
+}
+
+.services .card a:hover {
+  color: var(--color-primary);
+}
+
+.services .card p {
+  padding: 0 30px;
+  margin-bottom: 30px;
+  color: var(--color-secondary);
+  font-size: 15px;
+}
+
+.services .card:hover .card-img img {
+  transform: scale(1.1);
 }
 
 #main {
@@ -678,6 +709,7 @@ section {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
+  margin-bottom: 8rem;
 }
 
 .cta h3 {
@@ -899,83 +931,44 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Counts
+# Pamphlet
 --------------------------------------------------------------*/
-.counts .content {
+.pamphlet {
+  margin-bottom: 5rem;
+}
+
+.pamphlet .content {
   padding: 30px 0;
 }
 
-.counts .content h3 {
+.pamphlet .content h3 {
   font-weight: 700;
   font-size: 34px;
   color: #151515;
 }
 
-.counts .content p {
+.pamphlet .content p {
   margin-bottom: 0;
 }
 
-.counts .content .count-box {
-  padding: 20px 0;
-  width: 100%;
-}
-
-.counts .content .count-box i {
-  display: block;
-  font-size: 36px;
-  color: #ffc451;
-  float: left;
-}
-
-.counts .content .count-box span {
-  font-size: 36px;
-  line-height: 30px;
-  display: block;
-  font-weight: 700;
-  color: #151515;
-  margin-left: 50px;
-}
-
-.counts .content .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 50px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #3b3b3b;
-}
-
-.counts .content .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #3b3b3b;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-
-.counts .content .count-box a:hover {
-  color: #626262;
-}
-
-.counts .image {
-  background: url("../img/counts-img.jpg") center center no-repeat;
+.pamphlet .image {
+  background: url("../img/valvehandle.jpg") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
 
 @media (max-width: 991px) {
-  .counts .image {
+  .pamphlet .image {
     text-align: center;
   }
 
-  .counts .image img {
+  .pamphlet .image img {
     max-width: 80%;
   }
 }
 
 @media (max-width: 667px) {
-  .counts .image img {
+  .pamphlet .image img {
     max-width: 100%;
   }
 }
@@ -985,7 +978,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("../img/largevalve.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
