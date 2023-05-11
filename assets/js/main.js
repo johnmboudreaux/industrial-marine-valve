@@ -79,7 +79,6 @@
    * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
-  console.log(selectHeader.offsetHeight);
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
