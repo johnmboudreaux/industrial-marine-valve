@@ -1220,7 +1220,6 @@ section {
 }
 
 .contact .email-form .error-message {
-  display: none;
   color: #fff;
   background: #ed3c0d;
   text-align: left;
@@ -1233,7 +1232,6 @@ section {
 }
 
 .contact .email-form .sent-message {
-  display: none;
   color: #fff;
   background: #18d26e;
   text-align: center;
@@ -1242,7 +1240,6 @@ section {
 }
 
 .contact .email-form .loading {
-  display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
@@ -1334,6 +1331,11 @@ section {
 
 .breadcrumbs ol li+li {
   padding-left: 10px;
+  color: #ffc431
+}
+
+.breadcrumbs ol li a {
+  color: #002868;
 }
 
 .breadcrumbs ol li+li::before {

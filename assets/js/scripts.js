@@ -11,16 +11,11 @@
         const subject = formData.get('subject')
         const text = formData.get('message')
         const city = formData.get('city')
-        console.log('name', name)
-        console.log('from', from)
-        console.log('sub', subject)
-        console.log('text', text)
-        console.log('city', city)
 
         try {
             contactForm.querySelector('.loading').classList.remove('d-none')
 
-            const response = await fetch('http://localhost:3000/api/v1/message-received', {
+            const response = await fetch('https://industrialmarinevalve.com/api/v1/message-received', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
